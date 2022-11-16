@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <div class="form">
+    <h1>QR Code Generator</h1>
+    <form>
+        <input type="url" id="website" name="website" placeholder="https://fransergiomota.com.br" required />
+        <button type="button" onclick="generateQRCode()">Generate QR Code</button>
+        <br/>
+        <h5>Optional settings</h5>
+        <br/>
+        <label for="colorBackground">Choose a background color</label>
+        <input type="color" id="color-background" name="colorBackground" />
+        <br/>
+        <label for="colorText">Choose a text color</label>
+        <input type="color" id="color-text" name="colorText" value="#FFFFFF"/>
+    </form>
+
+    <div id="qrcode-container">
+        <div id="qrcode" class="qrcode"></div>
+        <h4>As per your optional settings</h4>
+        <div id="qrcode-2" class="qrcode"></div>
+    </div>
+    </div>
+    <footer style="text-align: center">
+        <a href="https://fransergiomota.com.br">Developed by Fransérgio A. Mota</a>
+        <span>Using qrcodejs</span>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
